@@ -1,6 +1,31 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
+# ============================================
+# 🔐 SENSITIVE & SECURITY-RELATED
+# ============================================
+# API keys, tokens, and secrets
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# Private keys and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.cert
+*.crt
+
+# OAuth tokens and JWT secrets
+.auth
+.credentials
+
+# ============================================
+# 📦 DEPENDENCIES & BUILD ARTIFACTS
+# ============================================
+# Node.js dependencies
 /node_modules
 /.pnp
 .pnp.*
@@ -10,29 +35,88 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
-
-# next.js
+# Build output
 /.next/
 /out/
-
-# production
 /build
+/dist
+/target
 
-# misc
+# Package manager locks (sometimes)
+# Uncomment if you want to ignore lock files:
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# ============================================
+# 🛠️ IDE & OS-SPECIFIC FILES
+# ============================================
+# macOS
 .DS_Store
-*.pem
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
 
-# debug
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# JetBrains IDEs
+.idea/
+.idea_modules/
+*.iml
+*.iws
+*.ipr
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Vim
+.vim/
+*.swp
+*.swo
+*~
+
+# ============================================
+# 📋 LOG & TEMPORARY FILES
+# ============================================
+# npm/yarn logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# temp files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
 
+# Test coverage
+/coverage
+.nyc_output
+
+# ============================================
+# 🗄️ DATABASE & LARGE FILES
+# ============================================
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+*.sql
+*.dump
+
+# CSV/Excel with sensitive data
+*.csv
+*.xlsx
+*.xls
+
+# ============================================
+# 📄 VERCEL & TYPESCRIPT
+# ============================================
 # vercel
 .vercel
 
